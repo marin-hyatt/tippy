@@ -103,7 +103,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Tippy" id="kb9-Jv-R5G"/>
                     <connections>
-                        <outlet property="billField" destination="X3f-MC-gZc" id="unO-Ee-hee"/>
+                        <outlet property="billAmountField" destination="X3f-MC-gZc" id="8gD-ce-55A"/>
                         <outlet property="tipLabel" destination="dEj-Rn-occ" id="fcg-Rj-p6i"/>
                         <outlet property="tipPercentageControl" destination="57E-df-cuB" id="ZVq-Xe-zOF"/>
                         <outlet property="totalLabel" destination="IfM-gH-1jS" id="o2M-Kp-pYH"/>
