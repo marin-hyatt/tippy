@@ -4,7 +4,7 @@
 
 Submitted by: **Marin Hyatt**
 
-Time spent: **X** hours spent in total
+Time spent: **4.5** hours spent in total
 
 ## User Stories
 
@@ -14,7 +14,7 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 
-* [x ] Settings page to change the default tip percentage.
+* [x] Settings page to change the default tip percentage.
 * [ ] UI animations
 * [ ] Remembering the bill amount across app restarts (if <10mins)
 * [ ] Using locale-specific currency and currency thousands separators.
@@ -34,7 +34,7 @@ GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I struggled a little with implementing the default tip settings because I needed to update the tip and total price when the default tip was changed. 
 
 ## Credits
 
