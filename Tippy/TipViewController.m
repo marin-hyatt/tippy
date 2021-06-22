@@ -21,13 +21,54 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    NSLog(@"View will appear");
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    double doubleValue = [defaults doubleForKey:@"default_tip_percentage"];
+    
+    if (doubleValue == 0.15) {
+        self.tipPercentageControl.selectedSegmentIndex = 0;
+    } else if (doubleValue == 0.2) {
+        self.tipPercentageControl.selectedSegmentIndex = 1;
+    } else {
+        self.tipPercentageControl.selectedSegmentIndex = 2;
+    }
+    
+    [self updateLabels:self];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    NSLog(@"View did appear");
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+
+    NSLog(@"View will disappear");
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+
+    NSLog(@"View did disappear");
+}
+
 - (IBAction)onTap:(id)sender {
-    NSLog(@"Hello!");
     // Dismisses keyboard
     [self.view endEditing:true];
 }
 - (IBAction)updateLabels:(id)sender {
+    NSLog(@"updateLabels");
     //Calculates tip percentage based on which segment was chosen
     double tipPercentages[] = {0.15, 0.2, 0.25};
     double tipPercentage = tipPercentages[self.tipPercentageControl.selectedSegmentIndex];
