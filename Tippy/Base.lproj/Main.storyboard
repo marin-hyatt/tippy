@@ -76,7 +76,10 @@
                                 <rect key="frame" x="221" y="94" width="118" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="updateLabels:" destination="Jpw-av-DWW" eventType="editingChanged" id="cGU-ir-gxY"/>
+                                </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="57E-df-cuB">
                                 <rect key="frame" x="20" y="370" width="374" height="32"/>
@@ -86,6 +89,9 @@
                                     <segment title="20%"/>
                                     <segment title="25%"/>
                                 </segments>
+                                <connections>
+                                    <action selector="updateLabels:" destination="Jpw-av-DWW" eventType="valueChanged" id="PeI-74-SjE"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DM8-wm-c4S"/>
@@ -96,6 +102,12 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Tippy" id="kb9-Jv-R5G"/>
+                    <connections>
+                        <outlet property="billField" destination="X3f-MC-gZc" id="unO-Ee-hee"/>
+                        <outlet property="tipLabel" destination="dEj-Rn-occ" id="fcg-Rj-p6i"/>
+                        <outlet property="tipPercentageControl" destination="57E-df-cuB" id="ZVq-Xe-zOF"/>
+                        <outlet property="totalLabel" destination="IfM-gH-1jS" id="o2M-Kp-pYH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vow-wA-HW8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="P8E-Cc-Xoe">
