@@ -79,8 +79,14 @@
     double total = bill + tip;
     
     //Sets tip and total with correctly formatted numbers.
-    self.tipLabel.text = [NSString stringWithFormat:@"$%0.2f", tip];
-    self.totalLabel.text = [NSString stringWithFormat:@"$%0.2f", total];;
+    [UIView animateWithDuration:0.4 animations:^{
+        self.tipLabel.text = [NSString stringWithFormat:@"$%0.2f", tip];
+        self.totalLabel.text = [NSString stringWithFormat:@"$%0.2f", total];;
+    }];
+    
+    
+    
+    
 }
 
 /*
