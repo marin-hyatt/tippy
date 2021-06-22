@@ -27,7 +27,7 @@
         <!--Tippy-->
         <scene sceneID="Xu8-VP-4mL">
             <objects>
-                <viewController id="Jpw-av-DWW" sceneMemberID="viewController">
+                <viewController id="Jpw-av-DWW" customClass="TipViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dNB-Oz-Zw2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,10 +90,19 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DM8-wm-c4S"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="P8E-Cc-Xoe" appends="YES" id="mvK-VO-K66"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Tippy" id="kb9-Jv-R5G"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vow-wA-HW8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="P8E-Cc-Xoe">
+                    <connections>
+                        <action selector="onTap:" destination="Jpw-av-DWW" id="ysA-zy-NaO"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-384.05797101449281" y="-630.13392857142856"/>
         </scene>
